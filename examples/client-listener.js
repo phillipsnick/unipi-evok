@@ -6,12 +6,11 @@ const unipi = new evok(require('./config'))
 unipi
     .on('connected', () => {
         console.log('Connected!')
-        console.log(`Found ${unipi.devices.length} devices`)
     })
     .on('error', (err) => {
         console.log('Error', err)
     })
-    .on('data', (message) => {
+    .on('message', (message) => {
         console.log('Received', message)
     })
     .connect()

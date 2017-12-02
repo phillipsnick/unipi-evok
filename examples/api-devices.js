@@ -9,7 +9,7 @@ unipi
     })
     .on('connected', () => {
         console.log('Connected!')
-        console.log('Devices', unipi.devices)
+        console.log('Devices', unipi.devices())
     })
     .connect()
 
