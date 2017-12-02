@@ -11,7 +11,9 @@
     "url": "git+https://github.com/phillipsnick/unipi-evok.git"
   },
   "keywords": [
-    "unipi"
+    "unipi",
+    "evok",
+    "neuron"
   ],
   "author": "Nick Phillips",
   "license": "MIT",
