@@ -327,6 +327,69 @@ unipi.set('relay', '2_01', true)
 
 ## Events
 
+### Module events
+
+Created by this module.
+
+#### connect
+
+Emitted on connect of the WebSocket.
+
+#### connectFailed
+
+#### message
+
+When any message is received via the WebSocket.
+
+__Example__
+
+```js
+unipi.on('message', (message) => {
+    // message = [{
+    //     modes: [ 'Voltage', 'Current', 'Resistance' ],
+    //     value: 2.1998616187837583,
+    //     glob_dev_id: 1,
+    //     dev: 'ao',
+    //     circuit: '1_01',
+    //     unit: 'V',
+    //     mode: 'Voltage' 
+    // }]
+})
+````
+
+### EVOK Events
+
+By default we emit events based on the type of device which has made a change.
+
+Note these do not necessarily mean the value changed.
+
+#### input
+
+When a digital input message is received.
+
+#### relay
+
+When a relay message is received.
+
+#### ai
+
+When analogue input message is received.
+
+#### ao
+
+When analogue output message is received.
+
+#### led
+
+When LED message is received.
+
+#### wd
+
+When a watchdog message is received
+
+#### neuron
+#### uart
+#### wifi
 
 ## Notes
 
