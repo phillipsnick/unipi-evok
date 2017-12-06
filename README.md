@@ -143,6 +143,21 @@ __Example__
 unipi.devices() // array of objects returned from the API 
 ```
 
+### device(dev, circuit) 
+
+Find a device from the list of devices
+
+__Arguments__
+
+* `dev` - Device as defined on EVOK API, eg `ao`
+* `circuit` - Circuit as defined on EVOK API
+
+__Example__
+
+```js
+let device = unipi.device('relay', '2_05')
+```
+
 ### inputs()
 
 Digital inputs filtered from the device list.
@@ -361,7 +376,21 @@ unipi.on('message', (message) => {
 
 By default we emit events based on the type of device which has made a change.
 
-Note these do not necessarily mean the value changed.
+__Arguments__
+
+* `device` - Latest data emitted from EVOK API
+* `device` - Last stored data from `devices()` prior to event, note this may be null in some cases
+
+Note these do not necessarily mean the value changed, nor should they be considered 100% reliable as race conditions may occur.
+
+__Example__
+
+```js
+unipi.on('message', (device, devicePrevious) => {
+    console.log(device) // latest data from the EVOK API
+    console.log(devicePrevious) // null or previous data stored in our local array of devices prior to message
+})
+```
 
 #### input
 
