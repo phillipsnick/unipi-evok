@@ -24,7 +24,6 @@ const unipi = new evok({
     wsPort: 8080
 })
 
-
 unipi
     .on('connected', () => {
         // logic once connected here
@@ -39,7 +38,6 @@ unipi
 * `wsPort` - Port of EVOK WebSocket API - Default is 8080
 
 ## Client Methods
-
 
 Note internal methods are not documented.
 
