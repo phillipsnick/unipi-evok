@@ -1,6 +1,6 @@
 # UniPi Evok 
 
-Node JS wrapper for UniPi EVOK REST and WebSocket API as documented at [EVPK Documentation](https://evok-1.api-docs.io/1.01).
+Node JS wrapper for UniPi EVOK REST and WebSocket API as documented at [EVOK Documentation](https://evok-1.api-docs.io/1.01).
 
 *Note this only supports EVOK API v2.0*
 
@@ -352,6 +352,8 @@ Emitted on connect of the WebSocket.
 
 #### connectFailed
 
+Emitted when we failed to connect to the WebSocket
+
 #### message
 
 When any message is received via the WebSocket.
@@ -371,6 +373,14 @@ unipi.on('message', (message) => {
     // }]
 })
 ````
+
+#### error
+
+Emitted when theres an error.
+
+#### close
+
+Emitted when the WebSocket connection is closed.
 
 ### EVOK Events
 
@@ -399,6 +409,10 @@ When a digital input message is received.
 #### relay
 
 When a relay message is received.
+
+#### digitalOutput
+
+When a digital output message is received.
 
 #### ai
 
