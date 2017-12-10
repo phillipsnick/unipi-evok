@@ -434,7 +434,7 @@ When a watchdog message is received
 
 ## Notes
 
-This is currently been kept quite basic due to time constraints.
+__This is currently a work in progress.__
 
 ## Licence
 
