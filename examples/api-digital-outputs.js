@@ -11,8 +11,8 @@ unipi
         console.log('Connected!')
 
         // invert the digital output states
-        unipi.outputs().forEach((output) => {
-            unipi.output(output.circuit, !unipi.output(output.circuit))
+        unipi.digitalOutputs().forEach((output) => {
+            unipi.digitalOutput(output.circuit, !unipi.output(output.circuit))
         })
     })
     .on('output', (output) => {

@@ -205,17 +205,17 @@ Set the state
 unipi.relay('2_01', true) 
 ```
 
-### outputs()
+### digitalOutputs()
 
 Digital outputs filtered from the device list.
 
 __Example__
 
 ```js
-unipi.outputs() // array of objects
+unipi.digitalOutputs() // array of objects
 ```
 
-### output(circuit, state)
+### digitalOutput(circuit, state)
 
 Either get the current state of a digital output or set a new state. Note this will not return the state when setting.
 
@@ -229,13 +229,13 @@ __Examples__
 Get the state
 
 ```js
-unipi.output('2_01') // true/false
+unipi.digitalOutput('2_01') // true/false
 ```
 
 Set the state
 
 ```js
-unipi.output('2_01', true) 
+unipi.digitalOutput('2_01', true) 
 ```
 
 ### leds()
